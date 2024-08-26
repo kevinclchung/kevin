@@ -178,14 +178,19 @@ export default {
 
     generateStars()
     placeBees()
+    let currentWindowSize = window.innerWidth
     window.addEventListener('resize', () => {
-      const rightLimit = window.innerWidth - shipSize - gap
-      shipPositionLimits.right = rightLimit
-      if (state.shipPosition > rightLimit) {
-        state.shipPosition = rightLimit
+      const updatedWindowSize = window.innerWidth
+      if (currentWindowSize !== updatedWindowSize) {
+        currentWindowSize = updatedWindowSize
+        const rightLimit = updatedWindowSize - shipSize - gap
+        shipPositionLimits.right = rightLimit
+        if (state.shipPosition > rightLimit) {
+          state.shipPosition = rightLimit
+        }
+        placeBees()
+        state.shots.clear()
       }
-      placeBees()
-      state.shots.clear()
     })
     window.addEventListener('keydown', (event) => {
       let didSomething = false
