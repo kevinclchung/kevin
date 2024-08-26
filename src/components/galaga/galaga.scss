@@ -1,0 +1,113 @@
+.galaga {
+  --ship-size: 50px; /** png actual size: 250px */
+  --shot-width: calc(15px * (50 / 250));
+  --shot-height: calc(44px * (50 / 250));
+  --gap: 10px;
+  --bee-width: calc(143px * (50 / 250));
+  --bee-height: calc(154px * (50 / 250));
+  --button-size: 44px;
+
+  .move-buttons {
+    display: flex;
+    position: fixed;
+    bottom: calc(var(--ship-size) + (var(--gap) * 3) + 37px);
+    left: var(--gap);
+
+    .move-left,
+    .move-right {
+      width: var(--button-size);
+      height: var(--button-size);
+      background-color: rgba(255, 255, 255, 0.37);
+      background-size: 24px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .move-left {
+      background-image: url('../../assets//images/galaga/chevron_left.svg');
+      border-radius: 50% 0 0 50%;
+      margin-right: 3px;
+    }
+    .move-right {
+      background-image: url('../../assets//images/galaga/chevron_right.svg');
+      border-radius: 0 50% 50% 0;
+    }
+  }
+  .fire-button {
+    position: fixed;
+    bottom: calc(var(--ship-size) + (var(--gap) * 3) + 37px);
+    right: calc(var(--gap) + (var(--button-size) / 2));
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: rgba(255, 255, 255, 0.37);
+    background-size: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/galaga/rocket.svg');
+    border-radius: 50%;
+  }
+  p.instructions {
+    position: fixed;
+    left: 10px;
+    bottom: calc(var(--ship-size) + (var(--gap) * 2));
+    color: black;
+    background-color: white;
+    padding: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: opacity 500ms;
+
+    @media only screen and (max-width: 800px) {
+      font-size: 10px;
+    }
+  }
+  .ship {
+    height: var(--ship-size);
+    width: var(--ship-size);
+    background-image: url('../../assets/images/galaga/ship.png');
+    background-size: contain;
+    position: fixed;
+    bottom: var(--gap);
+    transition: left 200ms;
+  }
+  .shot {
+    position: fixed;
+    width: var(--shot-width);
+    height: var(--shot-height);
+    background-color: white;
+    top: calc(-5 * var(--shot-height));
+    // transition: top 500ms;
+    animation: shooting-travel 5s linear;
+    @keyframes shooting-travel {
+      0% {
+        top: calc(100vh - var(--ship-size));
+      }
+      100% {
+        top: calc(-1 * var(--shot-height));
+      }
+    }
+  }
+  .bee {
+    position: fixed;
+    width: var(--bee-width);
+    height: var(--bee-height);
+    background-image: url(../../assets//images/galaga/bee.png);
+    background-size: contain;
+    // top: var(--gap);
+  }
+  .star {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: starfield 30s linear;
+    @keyframes starfield {
+      from {
+        top: -1vh;
+      }
+      to {
+        top: 101vh;
+      }
+    }
+  }
+}

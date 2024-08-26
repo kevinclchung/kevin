@@ -1,35 +1,75 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  --timeline-height: 70vh;
+  --timeline-dot-size: 2vh;
+  --timeline-dot-height: 3vh;
+  --timeline-gap: 0.5vh;
+  --resume-container-width: 600px;
+  --resume-color: rgb(128, 159, 255);
+
+  height: 100vh;
+  align-items: center;
+  font-family: 'Red Hat Display', Georgia, 'Times New Roman', Times, serif;
+  color: var(--resume-color);
+
+  @media only screen and (max-width: 800px) {
+    --resume-container-width: 90%;
+  }
+}
+.bold {
+  font-weight: 700;
 }
 
-a,
-.green {
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+h1,
+h2 {
+  font-weight: 700;
+}
+p {
+  font-size: 14px;
+  margin: 14px 0;
+}
+.caption {
+  font-size: 12px;
+}
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: rgb(230, 76, 0);
   transition: 0.4s;
   padding: 3px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    color: rgb(227, 114, 59);
+    text-decoration: underline;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 24px;
   }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+    margin: 12px 0;
+  }
+  .caption {
+    font-size: 10px;
   }
 }
