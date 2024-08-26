@@ -61,7 +61,7 @@ export const store = reactive({
         dateGraduated: '2002',
         years: 4,
         honors: 'With Distinction',
-        societies: ['Beta Gamme Sigma', 'Golden Key International Honour Society']
+        societies: ['Beta Gamma Sigma Honor Society', 'Golden Key International Honour Society']
       }
     ],
     experience: [
