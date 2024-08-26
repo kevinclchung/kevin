@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   isActive: Boolean,
   isBlank: Boolean,

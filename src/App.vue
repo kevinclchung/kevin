@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import ResumeContainer from './components/resume/resume-container.vue'
 import GalagaContainer from './components/galaga/galaga.vue'
 </script>

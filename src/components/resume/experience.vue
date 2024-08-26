@@ -1,16 +1,16 @@
-<script setup>
-const props = defineProps({ xp: Object })
+<script setup lang="ts">
+const { xp } = defineProps({ xp: Object })
 </script>
 
 <template>
-  <div :id="xp.id" class="section" v-if="xp.id !== null">
-    <div :class="['logo', xp.id]" />
-    <h2>{{ xp.title }}</h2>
-    <h3>{{ xp.company }}</h3>
-    <span class="caption">{{ xp.specificDates }}</span>
+  <div :id="xp?.id" class="section" v-if="xp?.id !== null">
+    <div :class="['logo', xp?.id]" />
+    <h2>{{ xp?.title }}</h2>
+    <h3>{{ xp?.company }}</h3>
+    <span class="caption">{{ xp?.specificDates }}</span>
     <p>
     <ul>
-        <li v-for="event in xp.events">{{ event }}</li>
+        <li v-for="event in xp?.events">{{ event }}</li>
     </ul>
     </p>
   </div>

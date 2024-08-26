@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TimelineDot from './timeline-dot.vue'
 import { store } from '../../store'
 const education = store.cv.education

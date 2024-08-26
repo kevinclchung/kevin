@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Timeline from './timeline.vue'
 import Summary from './summary.vue'
 import Skills from './skills.vue'
@@ -9,8 +9,8 @@ import { debounce } from '../../utils'
 const experience = store.cv.experience
 function evalScrollPosition() {
   for (const id of store.cv.ids) {
-    const elPosition = document.getElementById(id).getBoundingClientRect().top
-    if (elPosition > 0) {
+    const elPosition = document.getElementById(id)?.getBoundingClientRect().top
+    if (elPosition && elPosition > 0) {
       store.updateActiveId(id)
       break
     }
