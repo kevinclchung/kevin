@@ -98,36 +98,34 @@ export default {
       const windowHeight = window.innerHeight
       setTimeout(() => {
         const newPosition = state.shipPosition + shipSize / 2
-        setTimeout(() => {
-          /** Nested timeouts to give the ship time to complete its
-           * transition to its new position
-           */
-          state.shots.set(id, {
-            position: newPosition,
-            enabled: true
-          })
-          let targetBeeId = null
-          for (const [beeId, bee] of state.bees) {
-            if (bee.left < newPosition && bee.left + beeSize.width > newPosition) {
-              targetBeeId = beeId
-              break /** for big Theta */
+        /** Nested timeouts to give the ship time to complete its
+         * transition to its new position
+         */
+        state.shots.set(id, {
+          position: newPosition,
+          enabled: true
+        })
+        let targetBeeId = null
+        for (const [beeId, bee] of state.bees) {
+          if (bee.left < newPosition && bee.left + beeSize.width > newPosition) {
+            targetBeeId = beeId
+            break /** for big Theta */
+          }
+        }
+        if (targetBeeId !== null) {
+          const travel = windowHeight - shipSize + shotHeight
+          const howLongToBee = 5 * 1000 * ((travel - beeSize.height) / travel)
+          setTimeout(() => {
+            let targetBee = state.bees.get(targetBeeId)
+            if (targetBee.top > 0) {
+              state.shots.set(id, {
+                position: newPosition,
+                enabled: false
+              })
+              placeBee(targetBeeId, targetBee.left)
             }
-          }
-          if (targetBeeId !== null) {
-            const travel = windowHeight - shipSize + shotHeight
-            const howLongToBee = 5 * 1000 * ((travel - beeSize.height) / travel)
-            setTimeout(() => {
-              let targetBee = state.bees.get(targetBeeId)
-              if (targetBee.top > 0) {
-                state.shots.set(id, {
-                  position: newPosition,
-                  enabled: false
-                })
-                placeBee(targetBeeId, targetBee.left)
-              }
-            }, howLongToBee)
-          }
-        }, 200)
+          }, howLongToBee)
+        }
       }, 50)
     }
     function startMoveLeft() {

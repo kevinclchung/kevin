@@ -67,7 +67,6 @@
     background-size: contain;
     position: fixed;
     bottom: var(--gap);
-    transition: left 200ms;
   }
   .shot {
     position: fixed;
@@ -75,7 +74,6 @@
     height: var(--shot-height);
     background-color: white;
     top: calc(-5 * var(--shot-height));
-    // transition: top 500ms;
     animation: shooting-travel 5s linear;
     @keyframes shooting-travel {
       0% {
