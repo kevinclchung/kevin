@@ -4,6 +4,7 @@ import Summary from './summary.vue'
 import Skills from './skills.vue'
 import Education from './education.vue'
 import Experience from './experience.vue'
+import ExamplesViewer from './examples-viewer.vue'
 import { store } from '../../store'
 import { debounce } from '../../utils'
 const experience = store.cv.experience
@@ -30,6 +31,7 @@ window.addEventListener('scroll', (event) => {
       <Experience v-for="xp in experience" :xp="xp" />
       <Education />
     </div>
+    <ExamplesViewer />
   </div>
 </template>
 

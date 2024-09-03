@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ExampleThumbs from './example-thumbs.vue'
+import { store } from '../../store';
 const { xp } = defineProps({ xp: Object })
 </script>
 
@@ -13,10 +15,19 @@ const { xp } = defineProps({ xp: Object })
         <li v-for="event in xp?.events">{{ event }}</li>
     </ul>
     </p>
+    <template v-if="xp?.examples !== null">
+      <h4>Examples</h4>
+      <p v-if="typeof xp?.examples === 'string'">
+        {{ xp.examples }}
+      </p>
+      <div v-else class="examples">
+        <ExampleThumbs :xp="xp" />
+      </div>
+    </template>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .logo {
   height: calc(250px / 2);
   width: calc(250px / 2);
@@ -58,5 +69,11 @@ const { xp } = defineProps({ xp: Object })
     &.xp-n2k::before {
       background-image: url('../../assets/images/resume/n2k-logo.png');
     }
+}
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 1em 0;
 }
 </style>

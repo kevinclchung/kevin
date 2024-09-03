@@ -7,6 +7,14 @@
   --timeline-gap: 0.5vh;
   --resume-container-width: 600px;
   --resume-color: rgb(167, 199, 250);
+  --pop-up-bg-color: white;
+  --pop-up-color: rgba(0, 0, 0, 0.87);
+  --pop-up-border-color: rgba(0, 0, 0, 0.16);
+  --pop-up-margin: 20px;
+  --pop-up-padding: 20px;
+  --toolbar-color: rgb(235, 235, 235);
+  --toolbar-height: 44px;
+  --selector-height: 90px;
 
   height: 100vh;
   align-items: center;
@@ -15,6 +23,12 @@
 
   @media only screen and (max-width: 800px) {
     --resume-container-width: 90%;
+  }
+  @media (prefers-color-scheme: dark) {
+    --pop-up-bg-color: rgb(52, 52, 52);
+    --pop-up-color: rgba(255, 255, 255, 0.87);
+    --toolbar-color: rgb(72, 72, 72);
+    --pop-up-border-color: rgba(255, 255, 255, 0.16);
   }
 }
 .bold {
@@ -30,13 +44,18 @@ h2 {
 h3 {
   font-size: 18px;
 }
+h4 {
+  font-size: 16px;
+}
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-weight: 700;
 }
 p {
   font-size: 14px;
-  margin: 14px 0;
+  margin: 1em 0;
 }
 .caption {
   font-size: 12px;
@@ -63,6 +82,9 @@ a {
     font-size: 18px;
   }
   h3 {
+    font-size: 16px;
+  }
+  h4 {
     font-size: 16px;
   }
   p {
