@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { store } from '../../store'
 const { org } = defineProps({ org: Object })
+const imageUrls = org?.examples.map((example: any) =>
+  example.content.map((section: any) =>
+    typeof section === 'object' && (section.type === 'image' || section.type === 'pdf')
+      ? new URL(`../../assets/images/resume/examples/${section.src}`, import.meta.url).href
+      : null
+  )
+)
 </script>
 
 <template>
@@ -14,7 +21,7 @@ const { org } = defineProps({ org: Object })
     "
   >
     <h1>{{ example.title }}</h1>
-    <template v-for="section in example.content">
+    <template v-for="(section, sectionIndex) in example.content">
       <p v-if="typeof section === 'string'">
         {{ section }}
       </p>
@@ -34,7 +41,7 @@ const { org } = defineProps({ org: Object })
           <div
             v-if="section.sizing === 'static'"
             :style="{
-              'background-image': `url('/src/assets/images/resume/examples/${section.src}')`,
+              'background-image': `url('${imageUrls[exampleIndex][sectionIndex]}')`,
               'background-size': `${section.width / section.scale}px ${section.height / section.scale}px`,
               width: section.sizing === 'static' ? `${section.width / section.scale}px` : '100%',
               height: section.sizing === 'static' ? `${section.height / section.scale}px` : 'auto'
@@ -42,13 +49,13 @@ const { org } = defineProps({ org: Object })
           />
           <img
             v-else-if="section.sizing === 'cover'"
-            :src="`/src/assets/images/resume/examples/${section.src}`"
+            :src="imageUrls[exampleIndex][sectionIndex]"
             class="covered"
           />
           <div
             v-if="section.sizing === 'contain'"
             :style="{
-              'background-image': `url('/src/assets/images/resume/examples/${section.src}')`
+              'background-image': `url('${imageUrls[exampleIndex][sectionIndex]}')`
             }"
           />
         </div>
@@ -57,13 +64,13 @@ const { org } = defineProps({ org: Object })
         <h3 v-if="section.title">{{ section.title }}</h3>
         <object
           class="pdf-example"
-          :data="`/src/assets/images/resume/examples/${section.src}`"
+          :data="imageUrls[exampleIndex][sectionIndex]"
           type="application/pdf"
           width="100%"
           height="480px"
         >
           <p>
-            <a :href="`/src/assets/images/resume/examples/${section.src}`">View the PDF</a>
+            <a :href="imageUrls[exampleIndex][sectionIndex]">View the PDF</a>
           </p>
         </object>
       </template>

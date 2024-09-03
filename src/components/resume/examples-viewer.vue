@@ -10,7 +10,7 @@ type PortfolioOrgType = {
   examples: any[]
 }
 
-const portfolio: PortfolioOrgType[] = [] // new Map()
+const portfolio: PortfolioOrgType[] = []
 
 function findOrgIndex() {
   let index = 0
@@ -66,7 +66,6 @@ watch(
 
 store.cv.experience.forEach((xp, xpIndex) => {
   if (Array.isArray(xp.examples)) {
-    // portfolio.set(xp.id, {
     portfolio.push({
       id: xp.id,
       company: xp.company,

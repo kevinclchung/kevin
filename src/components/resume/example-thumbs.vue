@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { store } from '../../store'
 const { xp } = defineProps({ xp: Object })
+const thumbUrls = xp?.examples.map(
+  (example: any) =>
+    new URL(`../../assets/images/resume/examples/${example.thumb}`, import.meta.url).href
+)
 </script>
 
 <template>
@@ -12,7 +16,7 @@ const { xp } = defineProps({ xp: Object })
         ? 'active'
         : ''
     "
-    :style="{ 'background-image': `url('/src/assets/images/resume/examples/${example.thumb}')` }"
+    :style="{ 'background-image': `url('${thumbUrls[exampleIndex]}')` }"
     @click="store.updateActiveExample(xp?.id, exampleIndex)"
   />
 </template>
