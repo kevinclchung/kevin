@@ -24,7 +24,7 @@
     <div></div>
     <p v-if="!isTouch" class="instructions" :style="{ opacity: showInstructions ? '1' : '0' }">
       Move: Left/Right<br />
-      Shoot: /
+      Shoot: Z
     </p>
     <div class="ship" :style="{ left: `${shipPosition}px` }" />
     <div
