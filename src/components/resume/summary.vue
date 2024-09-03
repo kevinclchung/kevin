@@ -19,7 +19,8 @@ const statement = store.cv.summary.statement
       {{ line }}
     </p>
     <p>
-      To view the code for this site, see GitHub:
+      Framework aside, all code for this site was written by me. No CMS was used. To view the code
+      for this site, see GitHub:
       <a target="_blank" href="https://github.com/kevinclchung/kevin"
         >github.com/kevinclchung/kevin</a
       >
