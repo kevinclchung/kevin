@@ -54,11 +54,9 @@ window.addEventListener('scroll', (event) => {
   padding: 36px 0;
 
   .skill-list {
-    column-count: 2;
-
-    @media only screen and (max-width: 800px) {
-      column-count: 1;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
   }
 }
 </style>

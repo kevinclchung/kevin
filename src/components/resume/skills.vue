@@ -6,12 +6,27 @@ const skills = store.cv.skills
 <template>
   <div id="skills" class="section">
     <h2>Skills</h2>
-    <p>
-      <ul class="skill-list">
-        <li v-for="skill in skills">
-          {{ skill }}
-        </li>
-      </ul>
-    </p>
+    <div class="skill-list">
+      <div>
+        <p>
+          <b>UI/UX Design:</b>
+        </p>
+        <ul>
+          <li v-for="skill in skills.design">
+            {{ skill }}
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p>
+          <b>Development:</b>
+        </p>
+        <ul>
+          <li v-for="skill in skills.development">
+            {{ skill }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>

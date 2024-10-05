@@ -34,25 +34,36 @@ export const store = reactive({
         `
       ]
     },
-    skills: [
-      'Typescript/Javascript',
-      'HTML5',
-      'SCSS (CSS)',
-      'Web Components',
-      'Vue',
-      'Angular',
-      'React',
-      'Ionic',
-      'Agile/SCRUM',
-      'Git (GitHub)',
-      'npm/yarn',
-      'Docker',
-      'Vite',
-      'VS Code',
-      'Figma',
-      'Sketch',
-      'Jira/Confluence'
-    ],
+    skills: {
+      design: [
+        'Figma',
+        'Sketch',
+        'Material Design',
+        'Adobe Photoshop',
+        'Adobe InDesign',
+        'Adobe Lightroom',
+        'daVinci Resolve',
+        'Design Systems'
+      ],
+      development: [
+        'Typescript/Javascript',
+        'HTML5',
+        'SCSS (CSS)',
+        'Web Components',
+        'Vue',
+        'Angular',
+        'React',
+        'Ionic',
+        'Jira/Confluence',
+        'Cross-Browser Testing',
+        'Unit Testing',
+        'Agile/SCRUM',
+        'Git (GitHub)',
+        'npm/yarn',
+        'Docker',
+        'Vite'
+      ]
+    },
     education: [
       {
         id: null,
@@ -80,61 +91,61 @@ export const store = reactive({
         dateGraduated: '2002',
         years: 4,
         honors: 'With Distinction',
-        societies: ['Beta Gamma Sigma Honor Society', 'Golden Key International Honour Society']
+        societies: ['Beta Gamma Sigma Honor Society', 'Golden Key International Honor Society']
       }
     ],
     experience: [
       {
         id: 'xp-spoton',
-        company: 'SpotOn Transact',
-        title: 'UI Designer / Frontend Engineer',
+        company: 'SpotOn',
+        title: 'UI/UX Designer and Frontend Engineer',
         years: 6,
         specificDates: 'Nov 2019',
         events: [
           `
-            From the ground-up, designed and built brand-new systems, including the company's
-            sales-agent-facing portal, and a new system for payment-data configurations and
-            reporting.
+            Designed and built new systems, including a sales executive portal and a
+            payment data manipulation and reporting system.
           `,
           `
-            Modernized existing systems for operations teams, using new technologies to the team,
-            including Vue, Typescript, React, Vite and Web Components.
+            Modernized legacy systems for operations teams by introducing new 
+            technologies such as Vue, TypeScript, React, Vite, and Web Components.
           `,
           `
-            Built and maintained tools for the company’s custom CRM system, including a ticketing
-            system and fraud-mitigation systems.
+            Designed, built, and maintained tools for the company’s primary CRM system, 
+            including ticketing and fraud mitigation systems, leading to improved 
+            customer communication and reduced financial risk.
           `
         ],
         examples: `
-            At SpotOn, I was assigned to projects creating internal services and tools. They have
-            not been made public, are still in use today, and are considered "trade secrets."
-            Dissappointingly, that means that I cannot show them to you here.
-            The technologies and tools regularly used: Figma, Vue, Docker, Git, and React.
+            At SpotOn, I was assigned to projects focused on creating internal services 
+            and tools. These projects are not public, are still in use today, and are 
+            considered "trade secrets." Unfortunately, this means I cannot share them with 
+            you here. The technologies and tools I regularly used include Figma, Vue, 
+            Docker, Git, and React.
           `
       },
       {
         id: 'xp-tsys-cpay',
         company: 'TSYS / Central Payment',
-        title: 'UI/UX Architect',
+        title: 'UI/UX Architect and Frontend Engineer',
         years: 6,
         specificDates: 'Oct 2013 - Nov 2019',
         events: [
           `
-            From the ground up, designed and coded customer and partner portals, and main company
-            marketing websites.
+            Designed and built customer and partner portals and the main marketing 
+            websites, increasing visibility for partners and customers.
           `,
           `
-            Designed and coded the front-end of more than a dozen tools and reports to modernize
-            the company’s main back-office custom CRM system, including a complete sales proposal
-            creation tool, using Angular.
+            Developed the front end of more than a dozen tools and reports to modernize 
+            and improve the usability of the company’s custom CRM system, including a 
+            complete sales proposal creation tool using Angular, resulting in high 
+            conversion rates.
           `,
           `
-            From the ground up, designed and coded the front-end of the CRM hybrid mobile app for
-            agents, using Angular and Ionic.
-          `,
-          `
-            Wrote and implemented brand and design language style guides for four major Central
-            Payment custom applications.
+            Designed and coded the front end of the CRM hybrid mobile app for agents 
+            from the ground up using Angular and Ionic. Created and implemented design 
+            language style guides for more consistent branding and communication 
+            standards.
           `
         ],
         examples: [
@@ -152,30 +163,30 @@ export const store = reactive({
                 title: 'On iPhone'
               },
               `
-                Central Payment's greatest asset was its network of thousands of sales agents. The
-                Agent App was a hybrid mobile app created to help these agents keep track of their
-                clients (merchants), and get the resources they needed to make successful
-                conversions.
+                Central Payment's greatest asset was its network of thousands of sales 
+                agents. The Agent App was a hybrid mobile app created to help these 
+                agents keep track of their clients (merchants) and access the resources 
+                they needed for successful conversions.
               `,
               `
-                It was designed in a collaborative effort between two small teams, over the course of
-                several design sprints, and was the result of weeks of user testing. I composed
-                all finalized designs, coded the frontend, and hooked into an Laravel-driven REST
-                backend.
+                It was designed through a collaborative effort between two small teams 
+                over the course of several design sprints, resulting from weeks of user 
+                testing. I created all finalized designs, coded the frontend, and 
+                integrated it with a Laravel-driven REST backend.
               `,
               `
-                Since the app was built with Ionic, it was designed and engineered with UI that
-                adapted to its platform and conformed to Apple's HIG on iOS and Google's
-                Material on Android. Notice the differences in phones, and UI elements in the
-                images above.
+                Since the app was built with Ionic, it was designed and engineered with 
+                a UI that adapted to its platform, conforming to Apple's Human Interface 
+                Guidelines on iOS and Google's Material Design on Android. Notice the 
+                differences in phones and UI elements in the images above.
               `,
               `
-                These images were composed by me to use in the App Store (for iOS) and
+                These images were created by me for use in the App Store (for iOS) and 
                 Google Play (for Android).
               `,
               `
-                Core technologies and tools: Sketch (Design), Angular (Frontend), Ionic (Frontend),
-                Photoshop (Promotional Material).
+                Core technologies and tools: Sketch (Design), Angular (Frontend), Ionic 
+                (Frontend), and Photoshop (Promotional Material).
               `,
               {
                 type: 'image',
@@ -198,17 +209,19 @@ export const store = reactive({
                 title: null
               },
               `
-                When I joined Central Payment, the company had no cohesive marketing voice. So
-                in an effort for better company-wide marketing communication, I
-                created these brand guidelines, which provided solid recommendations not
-                just for single design language (like colors and font families), but also
-                writing tone, grammar and formatting.
+                When I joined Central Payment, the company lacked a cohesive marketing 
+                voice. To improve company-wide marketing communication, I created brand 
+                guidelines that provided solid recommendations not only for a unified 
+                design language (such as colors and font families) but also for writing 
+                tone, grammar, and formatting.
               `,
               `
-                I wrote all instructions and rules, created all illustrations except product
-                logos, and laid-out all pages.
+                I wrote all the instructions and rules, created all illustrations 
+                except for the product logos, and laid out all the pages.
               `,
-              'Core tools: Sketch, Photoshop and InDesign.'
+              `
+                Core tools: Sketch, Photoshop, and InDesign.
+              `
             ]
           },
           {
@@ -224,26 +237,35 @@ export const store = reactive({
                 height: 2825,
                 title: null
               },
-              'One of the biggest success stories at Central Payment was its updated system ' +
-                'to create sales proposals. The company would have achieved little success if ' +
-                'it weren’t for its ability to convert new merchants at high rates. No small ' +
-                'contributor to this success was the ability of its Sales department to ' +
-                'create attractive proposals quickly and easily.',
-              'For days, I observed Sales department team members using the old system and ' +
-                'identified keys areas of improvement, including:',
+              `
+                One of the biggest success stories at Central Payment was its updated 
+                system for creating sales proposals. The company would have achieved 
+                little success without its ability to convert new merchants at high 
+                rates. A significant contributor to this success was the Sales 
+                department's capacity to create attractive proposals quickly and 
+                easily.
+              `,
+              `
+                For days, I observed team members in the Sales department using the 
+                old system and identified key areas for improvement, including:
+              `,
               {
                 type: 'unordered-list',
                 content: [
-                  'A streamlined process to enter existing and proposed fee structures',
-                  'An arrow-key based navigation system to move from field to field',
-                  'The use of drag-and-drop to customize the order of supplemental material',
-                  'Attractive ways to highlight savings to prospective merchants'
+                  'A streamlined process for entering existing and proposed fee structures',
+                  'An arrow-key-based navigation system to move from field to field',
+                  'The use of drag-and-drop functionality to customize the order of supplemental material',
+                  'Attractive ways to highlight savings for prospective merchants'
                 ]
               },
-              'The rest of the industry was using inflexible third-party services, or ugly ' +
-                'spreadsheet-based systems. This gave Central Payment a leg-up on the ' +
-                'competition.',
-              'Core technologies and tools: OmniGraffle (Design), Angular (Frontend).'
+              `
+                While the rest of the industry relied on inflexible third-party services
+                or unattractive spreadsheet-based systems, Central Payment gained a 
+                competitive edge.
+              `,
+              `
+                Core technologies and tools: OmniGraffle (design), and Angular (frontend).
+              `
             ]
           },
           {
@@ -269,21 +291,22 @@ export const store = reactive({
                 title: 'Front Page on Mobile'
               },
               `
-                When I joined Central Payment, its main website (hosted at www.cpay.com, but now
-                defunct due to the company's acquisition) was barely 5 pages long and
-                addressed agents more than the company's actual customer, the merchants.
+                When I joined Central Payment, its main website (hosted at 
+                www.cpay.com, now defunct due to the company's acquisition) was 
+                barely five pages long and addressed agents more than the company's 
+                actual customers, the merchants.
               `,
               `
-                I changed that by transforming its website into a central repository of
-                information where prospective merchants could learn about the products and
-                services that the company actually sold. This effort entailed weeks of
-                information gathering and collaboration with Sales
-                and Marketing team members.
+                I transformed the website into a central repository of information 
+                where prospective merchants could learn about the products and 
+                services the company offered. This effort involved weeks of 
+                information gathering and collaboration with Sales and Marketing 
+                leadership.
               `,
               `
-                In the end, the company gained a new, greater public face for its customers, as well
-                as a good source of information that agents could point to in order to build
-                a larger client portfolio.
+                As a result, the company gained a new and improved public face for 
+                its customers, as well as a valuable resource that agents could 
+                reference to build a larger client portfolio.
               `,
               {
                 type: 'image',
@@ -346,34 +369,35 @@ export const store = reactive({
                 title: 'On Mobile'
               },
               `
-                Richly-formatted emails use a pared-down version of HTML. Since I was the one
-                person in the company that had the most experience in creating nicely
-                formatted HTML content, one of my responsibilities was to update important
+                Richly formatted emails use a pared-down version of HTML. Since I had 
+                the most experience in creating nicely formatted HTML content within 
+                the company, one of my responsibilities was to update important 
                 merchant-facing email communications.
               `,
-              'These projects were extra-challenging (but super-fun), because:',
+              `
+                These projects were particularly challenging (but also very 
+                enjoyable) because:
+              `,
               {
                 type: 'unordered-list',
                 content: [
                   'You cannot rely on scripting.',
-                  'You cannot rely on any frontend frameworks/libraries.',
-                  'All styling should be inline.',
+                  'You cannot use any frontend frameworks or libraries.',
+                  'All styling must be inline.',
                   'Obfuscated links are discouraged, especially in financial industries.',
-                  `
-                    The design needs to be highly responsive to a number of port widths, because
-                    email is viewed in a variety of devices and window sizes.
-                  `
+                  'The design needs to be highly responsive to various screen widths, as emails are viewed on a range of devices and window sizes.'
                 ]
               },
               `
-                This example is an email design that merchants received when a package was
-                shipped from the company’s shipping center. Notice how the layout adapts to
-                smaller port widths, and does not simply shrink. I used an animated hero image
-                to catch the reader's eye, in an effort to keep them from skipping over it.
+                This example is an email design that merchants received when a 
+                package was shipped from the company’s shipping center. Notice how 
+                the layout adapts to smaller screen widths instead of simply 
+                shrinking. I used an animated hero image to catch the reader\'s eye 
+                in an effort to keep them engaged.
               `,
               `
-                Core technologies and tools: Sketch (Design), HTML, CSS and Laravel “Blade”
-                Templates.
+                Core technologies and tools: Sketch (design), HTML, CSS, and 
+                Laravel “Blade” templates.
               `
             ]
           },
@@ -391,18 +415,19 @@ export const store = reactive({
                 title: null
               },
               `
-                Central Payment was constantly growing its network of sales agents. To
-                facilitate this growth, I designed and developed a web-based form to
-                help prospective agents schedule interviews with recruiters.
+                Central Payment was continually expanding its network of sales 
+                agents. To support this growth, I designed and developed a web-based 
+                form that allowed prospective agents to schedule interviews with 
+                recruiters.
               `,
               `
-                The UI was designed around the constraints of the project, showing only a
-                short list of available time slots based on our recruiting team's
-                availability.
+                The UI was tailored to meet the project's constraints, displaying 
+                only a limited list of available time slots based on the recruiting 
+                team's availability.
               `,
               `
-                Core technologies and tools: Omnigraffle (Design), Angular (Frontend),
-                Moment (Time and Date Library).
+                Core technologies and tools: Omnigraffle (design), Angular 
+                (frontend), and Moment (time and date library).
               `
             ]
           },
@@ -420,19 +445,22 @@ export const store = reactive({
                 title: null
               },
               `
-                One of the primary responsibilities of Central Payment's operations was to
-                help merchants that needed a better pricing outlook for their business. This
-                tool, housed in the company's custom CRM, was created as a single-page view
-                of a merchant's financial outlook and the effects of a proposed pricing
-                structure change. Prior to this, no such top-down view of a merchant existed.
+                One of Central Payment's key operational responsibilities was 
+                assisting merchants who needed a clearer pricing outlook for their 
+                business. To address this, I created a tool within the company's 
+                custom CRM, which provided a single-page view of a merchant's 
+                financial outlook and the impact of proposed pricing structure 
+                changes. Prior to this, no such top-down view of a merchant's 
+                financials existed.
               `,
               `
-                I designed the entire page to conform to the company's UI Style Guide (also created
-                by me). I also coded the tool to be responsive to all port widths.
+                I designed the entire page to align with the company's UI Style 
+                Guide (which I also created) and developed the tool to be fully 
+                responsive across all screen widths.
               `,
               `
-                Core technologies and tools: Sketch (Design), Angular (Frontend), AngularMaterial
-                (UI Library).
+                Core technologies and tools: Sketch (design), Angular (frontend), 
+                and AngularMaterial (UI library).
               `
             ]
           },
@@ -450,13 +478,16 @@ export const store = reactive({
                 title: null
               },
               `
-                Central Payment's custom CRM incorporated a clunky search mechanism, with
-                separate pages for each kind of search. This updated design
-                gave users one single search field at
-                the top of every page, where they could enter a single search string and be met
-                with page that sets of results across different search types.
+                Central Payment's custom CRM initially had a clunky search 
+                mechanism, with separate pages for each type of search. I 
+                redesigned the system to provide users with a single search 
+                field at the top of every page, allowing them to enter one 
+                search string and receive a unified set of results across 
+                multiple search types.
               `,
-              'Core technologies and tools: Sketch (Design).'
+              `
+                Core technologies and tools: Sketch (design) and Material Design.
+              `
             ]
           },
           {
@@ -473,18 +504,19 @@ export const store = reactive({
                 title: null
               },
               `
-                This was an update to Central Payment's custom CRM system's user
-                profile, a page that helped team leaders gain insight into and help grow their
-                team members' skills.
+                This project involved updating the user profile page in Central 
+                Payment's custom CRM system, a key tool that helped team leaders 
+                gain insight into their team members and foster skill development.
               `,
               `
-                The updated design sports more information on a single page (better for
-                enterprise UX), differing from the previous design, which had separate pages
-                and tabs for nearly every section.
+                The updated design consolidated more information onto a single 
+                page, improving the user experience for enterprise needs. This was 
+                a shift from the previous design, which had separate pages and tabs 
+                for nearly every section.
               `,
               `
-                Core technologies and tools: Sketch (Design), Angular (Frontend),
-                AngularMaterial (UI Library).
+                Core technologies and tools: Sketch (design), Angular (frontend), 
+                and AngularMaterial (UI library).
               `
             ]
           },
@@ -502,22 +534,23 @@ export const store = reactive({
                 title: null
               },
               `
-                One of Central Payment's core strengths was its customer engagement, utilizing
-                an on-campus (in California) call center for customer service and technical
-                support in English, Vietnamese, Chinese, and Spanish. This was made possible
-                by constantly monitoring the call queue system, making sure that no
-                merchant was placed on hold for too long.
+                One of Central Payment's core strengths was its customer engagement, 
+                supported by an on-campus call center in California that provided 
+                customer service and technical support in English, Vietnamese, 
+                Chinese, and Spanish. This high level of service was maintained by 
+                closely monitoring the call queue system to ensure no merchant was 
+                left on hold for too long.
               `,
               `
-                I designed this version of the wallboard that enabled team members and leaders
-                to be constantly informed of call queue status. The previous
-                design had nothing but plain numbers. This updated design incorporated
-                graphical indicators for a more immediate effect, and a hot-vs.-cool color
-                scheme that immediately indicated trouble.
+                I designed a new version of the wallboard that kept team members and 
+                leaders constantly updated on call queue status. The previous design 
+                displayed only plain numbers, while the updated version introduced 
+                graphical indicators for quicker comprehension and a hot-vs.-cool 
+                color scheme to immediately highlight potential issues.
               `,
               `
-                Core technologies and tools: Sketch (Design), Angular (Frontend), Google
-                Charts (UI Library)
+                Core technologies and tools: Sketch (design), Angular (frontend), 
+                and Google Charts (UI library).
               `
             ]
           },
@@ -535,15 +568,16 @@ export const store = reactive({
                 title: null
               },
               `
-                One of my first assignments at Central Payment was to update the company's
-                merchant portal. A modern, more-pleasing design was applied to the
-                site, and the front page was sifted down to show the most
-                important information for the merchant. The new system featured an
-                on-page feature tour for first-time visitors.
+                One of my first assignments at Central Payment was to update the 
+                company's merchant portal. I applied a modern, more visually 
+                appealing design to the site and streamlined the front page to 
+                display the most important information for merchants. The new 
+                system also included an on-page feature tour for first-time 
+                visitors.
               `,
               `
-                Core technologies and tools: OmniGraffle (Design), HTML5, SCSS and Laravel
-                “Blade” Templates
+                Core technologies and tools: OmniGraffle (design), HTML5, SCSS, 
+                and Laravel "Blade" templates.
               `
             ]
           }
@@ -552,16 +586,16 @@ export const store = reactive({
       {
         id: 'xp-payhub',
         company: 'PayHub, Inc.',
-        title: 'Director of Product & Design',
+        title: 'Director of Product and Design',
         years: 3,
         specificDates: 'Apr 2011 - Oct 2013',
         events: [
           `
-            Designed and managed product specifications of all PayHub products, including a
-            web-based virtual terminal and financial reporting portal, iOS (native) and Android
-            (native) credit card transaction apps, e-commerce solutions, its marketing website,
-            and back-office boarding and data storage systems—until the company's successful
-            acquisition.
+            Designed and managed product specifications for all PayHub products, 
+            including a web-based virtual terminal, financial reporting portal, 
+            iOS and Android credit card transaction apps, e-commerce solutions, 
+            the main website, and back-office boarding and data storage systems, 
+            leading to the company’s successful acquisition.
           `
         ],
         examples: [
@@ -579,13 +613,14 @@ export const store = reactive({
                 title: null
               },
               `
-                PayHub Mobile was an app available for iPhone, iPad and Android that made
-                it easy to take credit card transactions (a la Square).
+                PayHub Mobile was an app available for iPhone, iPad, and Android, 
+                designed to make credit card transactions as simple as possible 
+                (similar to Square).
               `,
               `
-                From the very beginning, we made the decision to write the apps natively (Java
-                for Android and Objective-C for iOS). That meant that I needed to create
-                three versions for every design.
+                From the outset, we decided to develop the apps natively—using Java 
+                for Android and Objective-C for iOS. This required me to create 
+                three separate versions for each design.
               `,
               {
                 type: 'image',
@@ -597,11 +632,11 @@ export const store = reactive({
                 title: 'Manual Transactions'
               },
               `
-                Notice that each version uses native elements and fonts. The differences in
-                phone-sized and the tablet versions make the best use of space and displays
-                the most pertinent information possible at any one time. And despite those
-                differences, users of the phone apps
-                could hop on to the tablet version without getting lost.
+                Each version utilizes native elements and fonts. The phone and 
+                tablet versions are optimized to make the best use of space, 
+                displaying the most relevant information at any given time. Despite 
+                the differences in layout, users of the phone apps could 
+                seamlessly transition to the tablet version without confusion.
               `,
               {
                 type: 'image',
@@ -613,13 +648,14 @@ export const store = reactive({
                 title: 'Transaction History'
               },
               `
-                Also notice that the transaction view looks like a real receipt. When this was
-                created, no company was doing this. Now, everyone does.
+                The transaction view was designed to resemble a real receipt. At 
+                the time of its creation, no other company was doing this—now, 
+                it's a common practice.
               `,
               `
-                These assets were created by me for the company's main website (also created
-                by me) by capturing screenshots from real devices. None of it is
-                artificially rendered.
+                All of these assets were created by me for the company's main 
+                website (which I also built), using screenshots from actual 
+                devices. None of the visuals are artificially rendered.
               `,
               {
                 type: 'image',
@@ -631,9 +667,9 @@ export const store = reactive({
                 title: 'Swipers'
               },
               `
-                Side note: Did you notice that some iPhones are
-                upside down? That's because the swiper plugged in to the headphone jack,
-                and the jack was on the bottom. It's all in the details.
+                Side note: You might notice that some iPhones appear upside down. 
+                That's because the swiper plugged into the headphone jack, which 
+                was located on the bottom of the phone. It's all in the details.
               `,
               {
                 type: 'image',
@@ -660,11 +696,12 @@ export const store = reactive({
                 title: 'Home'
               },
               `
-                PayHub's main product was a virtual terminal, and website where merchants
-                can run credit card transactions without a physical machine. Our product
-                sported customer tracking, recurrent billing, employee management, and
-                powerful reports that kept the merchants up-to-date on the financial
-                progress of their business.
+                PayHub's main product was a virtual terminal, a website where 
+                merchants could process credit card transactions without needing a 
+                physical machine. Our product featured customer tracking, 
+                recurring billing, employee management, and powerful reporting 
+                tools that helped merchants stay up-to-date on their business's 
+                financial progress.
               `,
               {
                 type: 'image',
@@ -691,30 +728,36 @@ export const store = reactive({
       {
         id: 'xp-wigix',
         company: 'Wigix',
-        title: 'Content Producer & Designer',
+        title: 'Content Producer and Designer',
         years: 3,
         specificDates: 'Mar 2008 — Apr 2010',
         events: [
-          'Produced designs for Wigix.com, an e-commerce bidding website and pricing community.',
-          'Wrote how-to and marketing articles, and produced how-to video content for wigix.com.'
+          `
+            Produced designs for an e-commerce bidding website and pricing community.
+          `,
+          `
+            Wrote and produced how-to articles and video content, resulting in 
+            higher adoption rates.
+          `
         ],
         examples: null
       },
       {
         id: 'xp-apple-store',
         company: 'Apple, Inc.',
-        title: 'Business Consultant',
+        title: 'Business Partner',
         years: 1,
         specificDates: 'Apr 2007 — Aug 2007',
         events: [
           `
-            Helped local businesses acquire and integrate Apple technology into their IT
-            environments.
+            Helped local businesses acquire and integrate Apple technology into 
+            their IT environments.
           `,
           `
-            Sold and provided troubleshooting for Apple customers at the flagship San Francisco
-            storefront, during Apple's ascension to becoming the world's number one consumer
-            electronics manufacturer, including the launch of the first generation iPhone.
+            Sold and provided troubleshooting support for Apple customers at the 
+            flagship San Francisco store during Apple’s rise to becoming the 
+            world’s leading consumer electronics manufacturer with the launch of 
+            the first-generation iPhone.
           `
         ],
         examples: null
@@ -722,19 +765,19 @@ export const store = reactive({
       {
         id: 'xp-n2k',
         company: 'Network 2000',
-        title: 'Inside Sales Representative & Trainer',
+        title: 'Inside Sales Representative and Trainer',
         years: 3,
         specificDates: 'Feb 2004 — Feb 2006',
         events: [
           `
-            Assisted in building Network 2000 as a leading IT sales, repair and engineering
-            outsourcer for a majority of the public and private K-12 education institutions
-            state-wide.
+            Assisted in building Network 2000 as the leading IT sales, repair, 
+            and engineering outsourcer for public and private K-12 education 
+            institutions statewide.
           `,
           `
-            Led training workshops and demos, in company and conference settings, covering a
-            variety of IT topics—including VPN tunneling and basic laptop maintenance—for up to
-            thirty attendees per session.
+            Led training workshops and demos in company and conference settings, 
+            covering a variety of IT topics, including VPN tunneling and basic 
+            laptop maintenance, for up to thirty attendees per session.
           `
         ],
         examples: null
@@ -747,9 +790,13 @@ export const store = reactive({
         specificDates: 'Jun 2001 — Dec 2002',
         events: [
           `
-            Assisted in sales and troubleshooting for Apple customers in a number of hi-ed
-            institutions in the state, during Apple's resurgence, including the launch of the
-            iTunes and the first-generation iPod.
+            Assisted in sales and troubleshooting for Apple customers at several 
+            higher education institutions statewide during Apple’s resurgence with 
+            the launch of iTunes and the first-generation iPod.
+          `,
+          `
+            Conducted demos and workshops on Apple software, including Mac OS X, 
+            iMovie and iPhoto.
           `
         ],
         examples: null
