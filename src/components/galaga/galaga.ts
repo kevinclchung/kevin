@@ -1,5 +1,4 @@
 import { reactive, ref } from 'vue'
-import { debounce } from '../../utils'
 export default {
   setup() {
     /** These sizes would best be grabbed from css via
@@ -21,6 +20,7 @@ export default {
     const movement = 5
     let shotCount = 0
     const state = reactive({
+      started: false,
       isTouch: isTouchDevice(),
       shipPosition: gap,
       showInstructions: true,
@@ -151,6 +151,7 @@ export default {
       return 'ontouchstart' in window || navigator.maxTouchPoints > 0
     }
     function moveTouchStart(event: TouchEvent) {
+      if (!state.started) state.started = true
       if (event.target === moveLeftEl.value) {
         startMoveLeft()
       } else if (event.target === moveRightEl.value) {
@@ -218,6 +219,7 @@ export default {
         }
         if (state.showInstructions && didSomething) {
           console.log('"That man is playing Galaga! Thought we wouldn\'t notice ...but we did."')
+          if (!state.started) state.started = true
           state.showInstructions = false
         }
       }

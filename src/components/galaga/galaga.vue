@@ -5,6 +5,7 @@
     <div
       v-for="[_, bee] in bees"
       class="bee"
+      :class="started ? 'active' : ''"
       :style="{
         left: `${bee.left}px`,
         top: `${bee.top}px`,
@@ -26,7 +27,7 @@
       Move: Left/Right<br />
       Shoot: Z
     </p>
-    <div class="ship" :style="{ left: `${shipPosition}px` }" />
+    <div class="ship" :class="started ? 'active' : ''" :style="{ left: `${shipPosition}px` }" />
     <div
       v-for="[_, shot] in shots"
       class="shot"
