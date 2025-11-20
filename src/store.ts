@@ -96,24 +96,63 @@ export const store = reactive({
     ],
     experience: [
       {
+        id: 'xp-eximietas',
+        company: 'Eximietas Design & NVIDIA',
+        title: 'Business Systems Architect and Engineer',
+        years: 0.5,
+        specificDates: 'Apr 2025',
+        events: [
+          `
+            Contractor for NVIDIA, helping identify business requirements of an 
+            internal AI (LLM-driven) product. Consulting and performing tasks across 
+            all phases of the SDLC (gathering, design, development, validation, 
+            deployment, and reiteration) for a range of generative AI platforms, 
+            while collaborating with other engineers.
+          `,
+          `
+            Analysis and maintenance for continuous integration and deployment 
+            between frontend and backend systems using various RESTful middleware.
+          `,
+          `
+            Designed and implemented Frontend features and bug fixes with a focus 
+            on NVIDIA design system (Kaizen UI) components, and modern user 
+            experience (UX) standards (accessibility, mobile responsiveness, 
+            color scheme).
+          `,
+          `
+            Performed project planning, organization and delivery, through tools 
+            such as GitLab, Jira, Confluence, Excel and AI assistance OpenAI 
+            ChatGPT, Gemini, Copilot and CodeRabbit.
+          `
+        ],
+        examples: null
+      },
+      {
         id: 'xp-spoton',
         company: 'SpotOn',
         title: 'UI/UX Designer and Frontend Engineer',
         years: 6,
-        specificDates: 'Nov 2019',
+        specificDates: 'Nov 2019 - Aug 2024',
         events: [
           `
-            Designed and built new systems, including a sales executive portal and a
-            payment data manipulation and reporting system.
+            Designed new features for BI systems (business health), CRM (customer and 
+            partner data), and payment dataflow monitoring, using modern design tools, 
+            such as Figma and Sketch, and component-based composition.
           `,
           `
-            Modernized legacy systems for operations teams by introducing new 
-            technologies such as Vue, TypeScript, React, Vite, and Web Components.
+            Engineered the frontend and modernized legacy systems for operations teams by 
+            introducing new frontend technologies such as Vue, TypeScript, React, Vite, 
+            and Web Components.
+          `,
+          ` 
+            Acted as the submitter expert (SME) for UI and UX (Frontend) topics across 
+            tight development teams of designers, frontend and backend engineers, and 
+            QA testers and engineers.
           `,
           `
-            Designed, built, and maintained tools for the company’s primary CRM system, 
-            including ticketing and fraud mitigation systems, leading to improved 
-            customer communication and reduced financial risk.
+            Gathered and implemented system requirements from stakeholders and end-users 
+            for the design, building, and maintenance for internal systems. Defined 
+            backend request and response formatting for needed RESTful endpoints.
           `
         ],
         examples: `
@@ -132,20 +171,28 @@ export const store = reactive({
         specificDates: 'Oct 2013 - Nov 2019',
         events: [
           `
-            Designed and built customer and partner portals and the main marketing 
-            websites, increasing visibility for partners and customers.
+            Designed, architected and engineered financial business systems, including 
+            customer and partner portals and marketing websites, increasing visibility 
+            between team members, business partners and end customers.
           `,
           `
-            Developed the front end of more than a dozen tools and reports to modernize 
-            and improve the usability of the company’s custom CRM system, including a 
-            complete sales proposal creation tool using Angular, resulting in high 
-            conversion rates.
+            Initiated and maintained cross-team and stakeholder feedback for product 
+            requirements for quality assurance and continuous improvement of company 
+            systems and business processes.
           `,
           `
-            Designed and coded the front end of the CRM hybrid mobile app for agents 
-            from the ground up using Angular and Ionic. Created and implemented design 
-            language style guides for more consistent branding and communication 
-            standards.
+            Designed and developed more than a dozen tools and reports to modernize and 
+            improve the usability of the company’s custom CRM systems for Mobile and 
+            the Web, including a complete sales proposal creation tool using Angular, 
+            resulting in high conversion rates.
+          `,
+          `
+            Conducted iteration-driven improvements to all systems, including end-user 
+            testing, quality assurance testing.
+          `,
+          `
+            Created and implemented design language style guides for more consistent 
+            branding and communication.
           `
         ],
         examples: [
@@ -591,11 +638,13 @@ export const store = reactive({
         specificDates: 'Apr 2011 - Oct 2013',
         events: [
           `
-            Designed and managed product specifications for all PayHub products, 
-            including a web-based virtual terminal, financial reporting portal, 
-            iOS and Android credit card transaction apps, e-commerce solutions, 
-            the main website, and back-office boarding and data storage systems, 
-            leading to the company’s successful acquisition.
+            Product design for all business systems, including customer financial 
+            products, reporting, mobile apps, marketing communication, and back-office 
+            boarding and data storage systems.
+          `,
+          `
+            Conducted user-acceptance testing (UAT) on web, iOS and Android products, 
+            identifying regressed issues and possible areas of improvement.
           `
         ],
         examples: [

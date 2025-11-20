@@ -27,7 +27,7 @@ window.addEventListener('scroll', (event) => {
     <Timeline />
     <div class="details">
       <Summary />
-      <Skills />
+      <!-- <Skills /> -->
       <Experience v-for="xp in experience" :xp="xp" />
       <Education />
     </div>

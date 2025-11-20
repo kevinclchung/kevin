@@ -50,6 +50,9 @@ const { xp } = defineProps({ xp: Object })
     background-position: -25%;
     border-radius: 50%;
   }
+    &.xp-eximietas::before {
+      background-image: url('../../assets/images/resume/eximietas.png');
+    }
     &.xp-spoton::before {
       background-image: url('../../assets/images/resume/spoton-logo.png');
     }
